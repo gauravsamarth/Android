@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvGreeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rahul Kumar"
+                    android:textSize="20sp"
+                    android:textColor="#ff3d00"
+                    android:textStyle="bold"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/profile"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="8dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvSearchAndOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search and Order"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Banner Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:text="Upto 49% off"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/banner"/>
+
+            <!-- Search Bar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/search_edit_background"
+                android:padding="8dp"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/searchIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/search"
+                    android:layout_marginEnd="8dp"/>
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Search Your Favorite Food"
+                    android:background="@android:color/transparent"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <VideoView
+                    android:id="@+id/videoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"/>
+            </LinearLayout>
+
+            <!-- Categories Section -->
+            <TextView
+                android:id="@+id/tvCategories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categories"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Add category items here -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="16dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/pizza"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/cat_1"
+                            android:layout_marginBottom="4dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pizza"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="25dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/burger"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/cat_2"
+                            android:layout_marginBottom="4dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Burger"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/hotDog"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/cat_3"
+                            android:layout_marginBottom="4dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hotdog"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/drinks"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/cat_4"
+                            android:layout_marginBottom="4dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Drinks"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="25dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/donuts"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/cat_5"
+                            android:layout_marginBottom="4dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Donuts"/>
+                    </LinearLayout>
+
+                    <!-- Add more categories similarly -->
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Recommended Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/tvRecommended"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recommended"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/tvSeeMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See more"
+                    android:textColor="#ff3d00"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="55dp"
+                android:orientation="vertical">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvRecommended"
+                    android:layout_marginTop="8dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <!-- Repeat this block for each item -->
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="16dp"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/image_pepperoni_pizza"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/pizza1" />
+
+                            <TextView
+                                android:id="@+id/tvpepperoni_pizza"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Pepperoni Pizza"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tvPrice1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="₹ 319"
+                                android:textSize="15sp"
+                                android:textColor="@color/colorAccent" />
+
+                            <ImageView
+                                android:id="@+id/ivAddToCart1"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="8dp"
+                                android:src="@drawable/plus"
+                                android:contentDescription="@string/add_to_cart" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="16dp"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/image_chese_burger"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/burger_large" />
+
+                            <TextView
+                                android:id="@+id/tv_chese_burger"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Chese Burger"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tvPrice2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="₹ 96"
+                                android:textSize="14sp"
+                                android:textColor="@color/colorAccent" />
+
+                            <ImageView
+                                android:id="@+id/ivAddToCart2"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="8dp"
+                                android:src="@drawable/plus"
+                                android:contentDescription="@string/add_to_cart" />
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="16dp"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/image_vegetable_pizza"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/vegetable_pizza" />
+
+                            <TextView
+                                android:id="@+id/tv_vegetable_pizza"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Vegetable Pizza"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tvPrice3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="₹ 249"
+                                android:textSize="14sp"
+                                android:textColor="@color/colorAccent" />
+
+                            <ImageView
+                                android:id="@+id/ivAddToCart3"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="8dp"
+                                android:src="@drawable/plus"
+                                android:contentDescription="@string/add_to_cart" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="16dp"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/image_4_chese_pizza"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/fourchese" />
+
+                            <TextView
+                                android:id="@+id/tv_4_chese_pizza"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="4 Chese Pizza"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tvPrice4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="₹ 150"
+                                android:textSize="14sp"
+                                android:textColor="@color/colorAccent" />
+
+                            <ImageView
+                                android:id="@+id/ivAddToCart4"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginLeft="20dp"
+                                android:src="@drawable/plus"
+                                android:contentDescription="@string/add_to_cart" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="16dp"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/image_paneer_makhani"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/paneer_makhani" />
+
+                            <TextView
+                                android:id="@+id/tv_paneer_makhani"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Paneer Makhani"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tvPrice5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="₹ 290"
+                                android:textSize="14sp"
+                                android:textColor="@color/colorAccent" />
+
+                            <ImageView
+                                android:id="@+id/ivAddToCart5"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="8dp"
+                                android:src="@drawable/plus"
+                                android:contentDescription="@string/add_to_cart" />
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="16dp"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/image_peppy_paneer"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/peppy_paneer" />
+
+                            <TextView
+                                android:id="@+id/tv_peppy_paneer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Peppy Paneer"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tvPrice6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="₹ 239"
+                                android:textSize="14sp"
+                                android:textColor="@color/colorAccent" />
+
+                            <ImageView
+                                android:id="@+id/ivAddToCart6"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="8dp"
+                                android:src="@drawable/plus"
+                                android:contentDescription="@string/add_to_cart" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="16dp"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/image_vegie_paradise"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/vegie_paradise" />
+
+                            <TextView
+                                android:id="@+id/tv_vegie_paradise"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text=" Vegie Paradise"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tvPrice7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="₹ 248"
+                                android:textSize="14sp"
+                                android:textColor="@color/colorAccent" />
+
+                            <ImageView
+                                android:id="@+id/ivAddToCart7"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginLeft="20dp"
+                                android:src="@drawable/plus"
+                                android:contentDescription="@string/add_to_cart" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="16dp"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/image_dosa"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/dosa" />
+
+                            <TextView
+                                android:id="@+id/tv_dosa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Dosa"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tvPrice8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="₹ 90"
+                                android:textSize="14sp"
+                                android:textColor="@color/colorAccent" />
+
+                            <ImageView
+                                android:id="@+id/ivAddToCart8"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="8dp"
+                                android:src="@drawable/plus"
+                                android:contentDescription="@string/add_to_cart" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="16dp"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/image_sambar_vada"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/sambar_vada" />
+
+                            <TextView
+                                android:id="@+id/tv_sambar_vada"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Sambar Vada"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tvPrice9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="₹ 100"
+                                android:textSize="14sp"
+                                android:textColor="@color/colorAccent" />
+
+                            <ImageView
+                                android:id="@+id/ivAddToCart9"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="8dp"
+                                android:src="@drawable/plus"
+                                android:contentDescription="@string/add_to_cart" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="16dp"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/image_idali"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/idli" />
+
+                            <TextView
+                                android:id="@+id/tv_idali"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Idlli"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tvPrice10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="₹ 80"
+                                android:textSize="14sp"
+                                android:textColor="@color/colorAccent" />
+
+                            <ImageView
+                                android:id="@+id/ivAddToCart10"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="8dp"
+                                android:src="@drawable/plus"
+                                android:contentDescription="@string/add_to_cart" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_navigation_menu"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/colorPrimary"
+        app:itemTextColor="@color/colorPrimary" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
